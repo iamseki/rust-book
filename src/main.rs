@@ -10,6 +10,9 @@ mod control_flow;
 #[path = "./chapter_03/variables_mutability.rs"]
 mod variables_mutability;
 
+#[path = "./chapter_04/ownership.rs"]
+mod ownership;
+
 use variables_mutability::{*};
 use functions::{print_labeled_measurement, statements_and_expressions, return_17, plus_one};
 
@@ -46,4 +49,12 @@ fn main() {
     control_flow::labeled_loop();
     control_flow::while_loop();
     control_flow::for_in_loop();
+
+    // ownership, memory management :mind_blowing:
+    ownership::stack_and_heap();
+    ownership::variable_scope();
+    ownership::string_type_example();
+    ownership::ownership_and_functions();
+    ownership::return_values_and_scope();
+    // we must uses references to pass a argument without transferring ownership !!!
 }
